@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shane Ng | Investment Research Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2933;
+      background: #f7f9fc;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 72px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      font-size: 18px;
+      color: #dbeafe;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      background: white;
+      color: #1e3a8a;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .nav-inner {
+      max-width: 1050px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #334155;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #1e3a8a;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 42px 20px 72px;
+    }
+
+    section {
+      margin-bottom: 52px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+      color: #0f172a;
+    }
+
+    .intro-card,
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .card p {
+      color: #475569;
+      margin-bottom: 12px;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-weight: 600;
+    }
+
+    .card a {
+      color: #1d4ed8;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #1d4ed8;
+      padding-left: 18px;
+      margin-bottom: 20px;
+    }
+
+    .timeline-item h3 {
+      font-size: 18px;
+      color: #111827;
+    }
+
+    .timeline-item span {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      color: #64748b;
+      padding: 32px 20px;
+      border-top: 1px solid #e5e7eb;
+      background: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 34px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shane Ng</h1>
+    <p>Finance undergraduate focused on investment research, private banking, asset management, and systematic market strategies.</p>
+    <div class="button-row">
+      <a class="button" href="mailto:shane.ng.rong.77@gmail.com">Contact Me</a>
+      <a class="button secondary" href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+      <a class="button secondary" href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <div class="intro-card">
+        <p>
+          I am a finance student at NUS Business School with interests across asset management, private banking, and market strategy. My work combines fundamental investment research, client-oriented thinking, and Python-based analysis to evaluate companies, portfolios, and systematic trading ideas.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Systematic Trading Strategy Backtest</h3>
+          <p>Built Python-based backtests exploring relative strength, moving averages, drawdown control, and equity/gold risk-off allocation regimes.</p>
+          <a href="#">View Project →</a>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Backtesting</span>
+            <span class="tag">Risk Management</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Market News Scraper & Telegram Bot</h3>
+          <p>Developed an automated workflow to scrape market news and send summaries through Telegram for faster monitoring of relevant developments.</p>
+          <a href="#">View Project →</a>
+          <div class="tag-row">
+            <span class="tag">Automation</span>
+            <span class="tag">News</span>
+            <span class="tag">Telegram Bot</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>HDB Resale Price Analytics</h3>
+          <p>Created regression and classification models using Singapore HDB resale data, with feature engineering and model evaluation.</p>
+          <a href="#">View Project →</a>
+          <div class="tag-row">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Regression</span>
+            <span class="tag">Singapore Data</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Investment Research</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>OTIS Stock Pitch</h3>
+          <p>Bottom-up DCF and investment thesis developed for the Point72–NTU Stock Pitch, including business analysis, valuation, and upside assessment.</p>
+          <a href="#">Read Summary →</a>
+          <div class="tag-row">
+            <span class="tag">DCF</span>
+            <span class="tag">Equities</span>
+            <span class="tag">Stock Pitch</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>CATL Stock Pitch</h3>
+          <p>Equity research pitch on CATL, focused on energy storage demand, competitive positioning, and valuation framework.</p>
+          <a href="#">Read Summary →</a>
+          <div class="tag-row">
+            <span class="tag">China Equities</span>
+            <span class="tag">Energy Storage</span>
+            <span class="tag">Valuation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Portfolio Strategy Notes</h3>
+          <p>Research notes on asset allocation, drawdown management, ETF selection, and long-term portfolio construction.</p>
+          <a href="#">Read Notes →</a>
+          <div class="tag-row">
+            <span class="tag">Portfolio</span>
+            <span class="tag">ETF</span>
+            <span class="tag">Asset Allocation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="intro-card">
+        <div class="timeline-item">
+          <h3>Global Private Banking Intern — HSBC</h3>
+          <span>Private Banking | Relationship Management | Insurance Solutions</span>
+          <p>Supported market and product research for relationship managers, with exposure to client-oriented advisory workflows and wealth solutions.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Investment Intern — Prime Asia Asset Management</h3>
+          <span>Investment Advisory | Market Research | Systematic Strategies</span>
+          <p>Researched market ideas, studied fundamental and technical analysis, and worked on systematic strategy projects under investment professionals.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Student Investment Competitions</h3>
+          <span>Stock Pitch | Case Competition | Investment Analysis</span>
+          <p>Participated in stock pitch and business case competitions involving valuation, strategy, presentation, and investment communication.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="intro-card">
+        <p>Email: <a href="mailto:shane.ng.rong.77@gmail.com">shane.ng.rong.77@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Shane Ng. Investment Research Portfolio.</p>
+  </footer>
+</body>
+</html>

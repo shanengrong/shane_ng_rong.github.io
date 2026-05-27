@@ -14,13 +14,15 @@
     :root {
       --bg: #06101f;
       --bg-deep: #020817;
-      --card: rgba(8, 22, 45, 0.84);
+      --panel: rgba(8, 22, 45, 0.86);
+      --panel-soft: rgba(12, 31, 62, 0.72);
       --line: rgba(148, 163, 184, 0.2);
       --border: rgba(96, 165, 250, 0.28);
       --text: #f8fafc;
       --muted: #cbd5e1;
       --subtle: #94a3b8;
       --blue: #2563eb;
+      --blue-dark: #1d4ed8;
       --blue-light: #60a5fa;
       --gold: #d6b35a;
     }
@@ -36,9 +38,9 @@
       background:
         linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-        radial-gradient(circle at 15% 8%, rgba(37, 99, 235, 0.28), transparent 32%),
-        radial-gradient(circle at 82% 3%, rgba(214, 179, 90, 0.12), transparent 24%),
-        linear-gradient(135deg, #071b38 0%, #051225 42%, #020817 100%);
+        radial-gradient(circle at 16% 8%, rgba(37, 99, 235, 0.26), transparent 32%),
+        radial-gradient(circle at 86% 2%, rgba(214, 179, 90, 0.12), transparent 24%),
+        linear-gradient(135deg, #071b38 0%, #051225 44%, #020817 100%);
       background-size: 44px 44px, 44px 44px, auto, auto, auto;
     }
 
@@ -124,7 +126,7 @@
     }
 
     .btn.primary {
-      background: #1d4ed8;
+      background: var(--blue-dark);
       border-color: rgba(147, 197, 253, 0.58);
       color: #fff;
     }
@@ -139,7 +141,6 @@
       width: 17px;
       height: 17px;
       flex: 0 0 auto;
-      stroke-width: 1.9;
     }
 
     .photo-panel {
@@ -196,12 +197,13 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
+      align-items: stretch;
     }
 
     .card {
       border: 1px solid var(--border);
       border-radius: 18px;
-      background: linear-gradient(180deg, rgba(14, 36, 72, 0.76), rgba(4, 13, 30, 0.9));
+      background: linear-gradient(180deg, var(--panel-soft), rgba(4, 13, 30, 0.92));
       box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
       backdrop-filter: blur(10px);
     }
@@ -220,6 +222,12 @@
       flex-direction: column;
     }
 
+    .research-body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
     .logo-box {
       width: 52px;
       height: 52px;
@@ -231,8 +239,8 @@
       overflow: hidden;
       color: #fff;
       font-weight: 900;
-      font-size: 14px;
-      letter-spacing: -0.04em;
+      font-size: 13px;
+      letter-spacing: -0.02em;
     }
 
     .logo-box svg {
@@ -242,8 +250,8 @@
     }
 
     .logo-box img {
-      max-width: 34px;
-      max-height: 34px;
+      max-width: 38px;
+      max-height: 38px;
       object-fit: contain;
       display: block;
     }
@@ -271,6 +279,7 @@
 
     .research-card .card-actions {
       margin-top: auto;
+      margin-bottom: 18px;
     }
 
     .card-btn {
@@ -288,7 +297,7 @@
     }
 
     .card-btn.featured {
-      background: #1d4ed8;
+      background: var(--blue-dark);
       border-color: rgba(147, 197, 253, 0.82);
     }
 
@@ -381,17 +390,14 @@
       <div class="button-row">
         <a class="btn primary" href="mailto:shane.ng@u.nus.edu" aria-label="Email Shane Ng">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 6.5h16v11H4z" stroke="currentColor" stroke-linejoin="round" />
-            <path d="M4.5 7l7.5 6 7.5-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4.5 6.75h15v10.5h-15z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+            <path d="M5 7.25l7 5.55 7-5.55" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
           <span>shane.ng@u.nus.edu</span>
         </a>
         <a class="btn" href="https://www.linkedin.com/in/shane-ng" target="_blank" rel="noopener" aria-label="LinkedIn profile">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M6.5 10v7" stroke="currentColor" stroke-linecap="round" />
-            <path d="M10.5 17v-4.1c0-1.7 1-2.9 2.6-2.9 1.5 0 2.4 1 2.4 2.8V17" stroke="currentColor" stroke-linecap="round" />
-            <path d="M6.5 7.2v.1" stroke="currentColor" stroke-linecap="round" />
-            <rect x="3.5" y="3.5" width="17" height="17" rx="3" stroke="currentColor" />
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M5.34 4.65c0 1.03-.78 1.85-2.04 1.85h-.02c-1.2 0-1.98-.82-1.98-1.85 0-1.05.8-1.85 2.03-1.85 1.23 0 1.98.8 2.01 1.85zM1.54 8.02h3.56V20.5H1.54V8.02zM8.03 8.02h3.41v1.7h.05c.47-.9 1.64-1.96 3.38-1.96 3.62 0 4.29 2.38 4.29 5.47v7.27h-3.56v-6.44c0-1.54-.03-3.52-2.15-3.52-2.15 0-2.48 1.68-2.48 3.41v6.55H8.03V8.02z" />
           </svg>
           <span>LinkedIn</span>
         </a>
@@ -414,9 +420,9 @@
         <article class="card project-card">
           <div class="logo-box" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none">
-              <path d="M4 18h16" stroke="currentColor" stroke-linecap="round" />
-              <path d="M6 15l4-4 3 3 5-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M17 7h2v2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M6 15l4-4 3 3 5-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M17 7h2v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
           <div>
@@ -437,7 +443,7 @@
 
         <article class="card project-card">
           <div class="logo-box" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram logo" />
+            <img src="telegram.png" alt="Telegram logo" />
           </div>
           <div>
             <h3>Market News Scraper with Daily Automated Updates to Telegram Bot</h3>
@@ -465,48 +471,56 @@
 
       <div class="grid-three">
         <article class="card research-card">
-          <div class="logo-box" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Otis_Worldwide_logo.svg" alt="OTIS logo" />
-          </div>
-          <h3>OTIS Stock Pitch</h3>
-          <p>Bottom-up DCF and investment thesis developed for the Point72–NTU Stock Pitch, including business analysis, valuation, and upside assessment.</p>
-          <div class="card-actions">
-            <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/OTIS.WrittenReport%20(Shane).pdf" target="_blank" rel="noopener"><span>View OTIS Deck</span><span>↗</span></a>
-          </div>
-          <div class="tags">
-            <span class="tag">DCF</span>
-            <span class="tag">Equities</span>
-            <span class="tag">Stock Pitch</span>
-          </div>
-        </article>
-
-        <article class="card research-card">
-          <div class="logo-box" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/CATL_logo.svg" alt="CATL logo" />
-          </div>
-          <h3>CATL Stock Pitch</h3>
-          <p>Equity research pitch on CATL, focused on energy storage demand, competitive positioning, and valuation framework.</p>
-          <div class="card-actions">
-            <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/CATL%20report%20(Shane).pdf" target="_blank" rel="noopener"><span>View CATL Deck</span><span>↗</span></a>
-          </div>
-          <div class="tags">
-            <span class="tag">China Equities</span>
-            <span class="tag">Energy Storage</span>
-            <span class="tag">Valuation</span>
+          <div class="research-body">
+            <div class="logo-box" aria-hidden="true">
+              <img src="otis.png" alt="OTIS logo" />
+            </div>
+            <h3>OTIS Stock Pitch</h3>
+            <p>Bottom-up DCF and investment thesis developed for the Point72–NTU Stock Pitch, including business analysis, valuation, and upside assessment.</p>
+            <div class="card-actions">
+              <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/OTIS.WrittenReport%20(Shane).pdf" target="_blank" rel="noopener"><span>View OTIS Deck</span><span>↗</span></a>
+            </div>
+            <div class="tags">
+              <span class="tag">DCF</span>
+              <span class="tag">Equities</span>
+              <span class="tag">Stock Pitch</span>
+            </div>
           </div>
         </article>
 
         <article class="card research-card">
-          <div class="logo-box" aria-hidden="true">AAG</div>
-          <h3>2025 NUS-AAG Asset Management Case Competition</h3>
-          <p>Private banking case analysis on client asset allocation, portfolio construction, and investment recommendations.</p>
-          <div class="card-actions">
-            <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/PB%20Case%20Presentation%20(Shane).pdf" target="_blank" rel="noopener"><span>View Case Deck</span><span>↗</span></a>
+          <div class="research-body">
+            <div class="logo-box" aria-hidden="true">
+              <img src="catl.png" alt="CATL logo" />
+            </div>
+            <h3>CATL Stock Pitch</h3>
+            <p>Equity research pitch on CATL, focused on energy storage demand, competitive positioning, and valuation framework.</p>
+            <div class="card-actions">
+              <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/CATL%20report%20(Shane).pdf" target="_blank" rel="noopener"><span>View CATL Deck</span><span>↗</span></a>
+            </div>
+            <div class="tags">
+              <span class="tag">China Equities</span>
+              <span class="tag">Energy Storage</span>
+              <span class="tag">Valuation</span>
+            </div>
           </div>
-          <div class="tags">
-            <span class="tag">Portfolio</span>
-            <span class="tag">Private Banking</span>
-            <span class="tag">Asset Allocation</span>
+        </article>
+
+        <article class="card research-card">
+          <div class="research-body">
+            <div class="logo-box" aria-hidden="true">
+              <img src="aag.png" alt="AAG logo" />
+            </div>
+            <h3>2025 NUS-AAG Asset Management Case Competition</h3>
+            <p>Private banking case analysis on client asset allocation, portfolio construction, and investment recommendations.</p>
+            <div class="card-actions">
+              <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/PB%20Case%20Presentation%20(Shane).pdf" target="_blank" rel="noopener"><span>View Case Deck</span><span>↗</span></a>
+            </div>
+            <div class="tags">
+              <span class="tag">Portfolio</span>
+              <span class="tag">Private Banking</span>
+              <span class="tag">Asset Allocation</span>
+            </div>
           </div>
         </article>
       </div>

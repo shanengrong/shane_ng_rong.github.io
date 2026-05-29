@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shane Ng | Investment Research Portfolio</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -199,8 +200,7 @@
       align-items: start;
     }
 
-    .project-card > div:last-child,
-    .research-card {
+    .project-card > div:last-child {
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -209,11 +209,15 @@
     .research-card {
       min-height: 410px;
       padding: 30px 24px 24px;
+      display: flex;
+      flex-direction: column;
       text-align: center;
       align-items: center;
+      height: 100%;
     }
 
     .research-card p {
+      flex-grow: 1;
       max-width: 315px;
       margin-left: auto;
       margin-right: auto;
@@ -281,13 +285,16 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin: 18px 0;
       width: 100%;
     }
 
-    .project-card .card-actions,
-    .research-card .card-actions {
+    .project-card .card-actions {
       margin-top: auto;
+      margin-bottom: 18px;
+    }
+
+    .research-card .card-actions {
+      margin-top: 0;
       margin-bottom: 18px;
     }
 
@@ -502,7 +509,7 @@
           <p>Bottom-up DCF and investment thesis developed for the Point72–NTU Stock Pitch, including business analysis, valuation, and upside assessment.</p>
 
           <div class="card-actions">
-            <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/OTIS.WrittenReport%20(Shane).pdf" target="_blank" rel="noopener">
+            <a class="card-btn" href="./OTIS.WrittenReport%20(Shane).pdf" target="_blank" rel="noopener">
               <span>View OTIS Deck</span><span>↗</span>
             </a>
           </div>
@@ -522,7 +529,7 @@
           <p>Equity research pitch on CATL, focused on energy storage demand, competitive positioning, and valuation framework.</p>
 
           <div class="card-actions">
-            <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/CATL%20report%20(Shane).pdf" target="_blank" rel="noopener">
+            <a class="card-btn" href="./CATL%20report%20(Shane).pdf" target="_blank" rel="noopener">
               <span>View CATL Deck</span><span>↗</span>
             </a>
           </div>
@@ -542,7 +549,7 @@
           <p>Private banking case analysis on client asset allocation, portfolio construction, and investment recommendations.</p>
 
           <div class="card-actions">
-            <a class="card-btn" href="https://github.com/shanengrong/Investment-Research/blob/main/PB%20Case%20Presentation%20(Shane).pdf" target="_blank" rel="noopener">
+            <a class="card-btn" href="./PB%20Case%20Presentation%20(Shane).pdf" target="_blank" rel="noopener">
               <span>View Case Deck</span><span>↗</span>
             </a>
           </div>
